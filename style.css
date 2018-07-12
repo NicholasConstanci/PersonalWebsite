@@ -2,28 +2,37 @@ html{
     width: 50vw;
     margin: 0 auto;
     font-family: 'Raleway', sans-serif;
-    /* background: #0a0c0b; */
-    /* background-image: url("zenbg-1.png"), url("zenbg-2.png"); */
     background: linear-gradient(210deg, #8564db 0%, #571497 100%);
     background-repeat: repeat;
+    box-sizing: border-box;
 }
 
 nav{
     position: fixed;
-    width: 47vw;
-    display: flex;
+    width: 48%;
+    display: inline-flex;
+    flex-flow: row wrap;
 }
 nav a{
-    flex-basis: 16.67%;
+    flex-basis: 12%;
     flex-grow: 1;
     flex-shrink: 1;
     align-content: space-around;
     text-align: center; 
 }
 
-.page{
-    height: 100vh;
-    padding-top: 5vh;
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.container .page{
+    flex-basis: 100vh;
+    flex-grow: 1;
+    flex-shrink: 0;
+    align-content: space-around;
+    padding-top: 10vh;
     color: transparent;
     font-size: 20px;
     text-shadow: white 0px 0px 1px;
@@ -56,4 +65,22 @@ a.button {
 #projects h5{
     color: transparent;
     text-shadow: 0 0 1;
+}
+
+@media(max-width: 600px){
+    html{
+        width: 100vw;
+        margin: 0;
+    }
+    nav{
+        width: 95vw;
+    }
+}
+
+@media(max-width: 340px){
+    #main img{
+     width: 100%; 
+     height: auto;
+     margin-bottom: 2vh;  
+    }
 }
