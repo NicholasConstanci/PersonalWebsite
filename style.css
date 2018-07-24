@@ -1,5 +1,6 @@
 html{
     width: 50vw;
+    height: 100vh;
     margin: 0 auto;
     font-family: 'Raleway', sans-serif;
     background: linear-gradient(210deg, #8564db 0%, #571497 100%);
@@ -13,7 +14,7 @@ nav{
     display: inline-flex;
     flex-flow: row wrap;
 }
-nav a{
+nav .button{
     flex-basis: 12%;
     flex-grow: 1;
     flex-shrink: 1;
@@ -21,22 +22,21 @@ nav a{
     text-align: center; 
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+.button {
+    text-decoration: none;
+    color: transparent;
+    text-shadow: white 0px 0px 0px;
+    margin: 0 5px;
+    border-bottom: 1px ridge #eee;
+    border-radius: 35%;
+    display: inline;
 }
 
-.container .page{
-    flex-basis: 100vh;
-    flex-grow: 1;
-    flex-shrink: 0;
-    align-content: space-around;
-    padding-top: 10vh;
-    color: transparent;
-    font-size: 20px;
-    text-shadow: white 0px 0px 1px;
+.button:hover {
+    color: #44f;
+    cursor: pointer;
 }
+
 
 #main img{
     height: 250px;
@@ -45,22 +45,8 @@ nav a{
     margin-right: 35px;
 }
 
-a {
-    text-decoration: none;
-    color: #adf;
-}
 
-a:hover{
-    color: #44f;
-}
 
-a.button {
-    color: transparent;
-    text-shadow: white 0px 0px 0px;
-    margin: 0 5px; 
-    border-bottom: 1px ridge #eee;
-    border-radius: 35%;
-}
 
 #projects h5{
     color: transparent;
@@ -83,4 +69,15 @@ a.button {
      height: auto;
      margin-bottom: 2vh;  
     }
+}
+
+.container .page{
+    display: none;
+    padding-top: 10vh;
+    color: transparent;
+    font-size: 20px;
+    text-shadow: white 0px 0px 1px;
+}
+.page#main{
+    display: inline-block;
 }
